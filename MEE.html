@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Salary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Smart Salary</h1>
+        <p>إدارة الرواتب وساعات العمل الإضافي</p>
+    </header>
+
+    <main>
+        <section class="settings">
+            <h2>إعدادات الحساب</h2>
+            <label>
+                ساعات العمل الشهرية:
+                <input type="number" id="monthlyHours" min="1" value="240">
+            </label>
+            <p>العادي: × 1.25 | يوم الإجازة: × 1.5</p>
+        </section>
+
+        <section class="dashboard">
+            <div class="box">
+                <h3>عدد الموظفين</h3>
+                <p id="employeeCount">0</p>
+            </div>
+            <div class="box">
+                <h3>الرواتب الأساسية</h3>
+                <p id="totalSalaries">0.00 د.أ</p>
+            </div>
+            <div class="box">
+                <h3>إجمالي الإضافي</h3>
+                <p id="totalOvertime">0.00 د.أ</p>
+            </div>
+            <div class="box">
+                <h3>إجمالي الرواتب</h3>
+                <p id="grandTotal">0.00 د.أ</p>
+            </div>
+        </section>
+
+        <section class="form-section">
+            <h2>إضافة موظف</h2>
+            <form id="employeeForm">
+                <input type="text" id="employeeName"
+                       placeholder="اسم الموظف" required>
+
+                <input type="number" id="employeeSalary"
+                       placeholder="الراتب الأساسي بالدينار"
+                       min="0" step="0.01" required>
+
+                <button type="submit">إضافة الموظف</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>قائمة الموظفين</h2>
+            <div id="employeeList"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

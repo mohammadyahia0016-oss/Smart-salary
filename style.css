@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f4f9;
+    color: #263247;
+}
+
+header {
+    background: #172b4d;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+main {
+    width: 92%;
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: 21px;
+}
+
+.settings, .form-section, .employee-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #0000000c;
+}
+
+.settings input {
+    width: 100px;
+    margin: 10px;
+}
+
+input {
+    padding: 12px;
+    border: 1px solid #ccd3df;
+    border-radius: 8px;
+    font-size: 15px;
+    max-width: 100%;
+}
+
+.form-section form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.form-section input {
+    flex: 1;
+    min-width: 180px;
+}
+
+button {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: #1769aa;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.88;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.box {
+    background: white;
+    padding: 17px 10px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 12px #0000000c;
+}
+
+.box h3 {
+    font-size: 15px;
+}
+
+.box p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1769aa;
+}
+
+.employee-card {
+    margin-bottom: 15px;
+}
+
+.employee-card h3 {
+    margin-top: 0;
+    color: #1769aa;
+}
+
+.overtime-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.overtime-inputs label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.result {
+    background: #f1f6fb;
+    padding: 14px;
+    border-radius: 8px;
+    line-height: 1.9;
+}
+
+.delete-btn {
+    background: #d93636;
+    margin-top: 12px;
+}
+
+@media (max-width: 650px) {
+    .dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .overtime-inputs {
+        grid-template-columns: 1fr;
+    }
+
+    .form-section form {
+        flex-direction: column;
+    }
+
+    .form-section input,
+    .form-section button {
+        width: 100%;
+    }
+}
